@@ -30,18 +30,19 @@ float imprimirMatriz(float matriz[NUMERO_ALUMNOS][NUMERO_NOTAS + 1], char alumno
 //INICIO DEL MAIN O PROGRAMA PRINCIPAL
 int main()
 {
-    srand(getpid());//duda 2
+    srand(getpid());//Semilla que genera los numeros aleatorios de la funcion numeros aleatorios
     llamaCiclo();
     return 0;
 }
 void llamaCiclo()
 {
+    //Declaracion de matrices por facultad
     float matriz_facultad_1[NUMERO_ALUMNOS][NUMERO_NOTAS + 1];
     float matriz_facultad_2[NUMERO_ALUMNOS][NUMERO_NOTAS + 1];
     float matriz_facultad_3[NUMERO_ALUMNOS][NUMERO_NOTAS + 1];
     char opcion;
     bool repetir = true;
-
+    //declaracion de promedios
     float promedio_facultad_1;
     float promedio_facultad_2;
     float promedio_facultad_3;
