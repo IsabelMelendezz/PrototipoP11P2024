@@ -1,5 +1,6 @@
 //LOURDES ISABEL MELENDEZ PINEDA
 //CARNET 9959-23-1379
+// VARIANTE A
 //----------CONTROL DE FACULTADES DE UNA UNIVERSIDAD------------
 
 //Declaracion de liberias a utilizar

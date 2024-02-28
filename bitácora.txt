@@ -1,0 +1,41 @@
+commit d678d4a3b3f98e04cac437cc8079d8d42634ad15
+Author: Isabel Melendez <lmelendezp@miumg.edu.gt>
+Date:   Wed Feb 28 10:45:08 2024 -0600
+
+    Subiendo mi proyecto final
+
+commit 51881cf7170a822288d803fc2355d8bf09470c57
+Author: Isabel Melendez <lmelendezp@miumg.edu.gt>
+Date:   Wed Feb 28 10:41:21 2024 -0600
+
+     Nueva tabla
+
+commit 97499ca17930cc42d923822d6700a7a1eec3629e
+Author: Isabel Melendez <lmelendezp@miumg.edu.gt>
+Date:   Wed Feb 28 10:37:08 2024 -0600
+
+    Comentarizando el programa
+
+commit 5754f2a470d8c4d2f873176b904f425a1f2e4a23
+Author: Isabel Melendez <lmelendezp@miumg.edu.gt>
+Date:   Wed Feb 28 10:30:02 2024 -0600
+
+    Agrego mas cambios a la tabla
+
+commit b7e54d222df34ad6d49997077d026989a03cfce8
+Author: Isabel Melendez <lmelendezp@miumg.edu.gt>
+Date:   Wed Feb 28 10:16:55 2024 -0600
+
+    Haciendo arreglos
+
+commit 1ff458867607a204175b853b919cea7444f033da
+Author: Isabel Melendez <lmelendezp@miumg.edu.gt>
+Date:   Wed Feb 28 10:10:14 2024 -0600
+
+    Proceso de llenado de matriz
+
+commit 644242b45a3efa738af9573380d860c82882b17a
+Author: Isabel Melendez <lmelendezp@miumg.edu.gt>
+Date:   Wed Feb 28 10:07:14 2024 -0600
+
+    Mi primer cambio
