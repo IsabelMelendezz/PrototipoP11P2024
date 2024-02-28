@@ -58,6 +58,7 @@ void llamaCiclo()
         promedio_facultad_1=0;
         promedio_facultad_2=0;
         promedio_facultad_3=0;
+        //impresion de encabezado
         cout<<"------------------------Bienvenido---------------------" << endl;
         cout<<"-----------------Comparacion de facultades-------------"<<endl<<endl;
         llenarMatriz(matriz_facultad_1);
@@ -66,6 +67,7 @@ void llamaCiclo()
         promedio_facultad_2 = imprimirMatriz(matriz_facultad_2, alumnos, "Facultad de Arquitectura");
         llenarMatriz(matriz_facultad_3);
         promedio_facultad_3 = imprimirMatriz(matriz_facultad_3, alumnos, "Facultad de Administracion");
+        //comparativa de promedios
         if (promedio_facultad_1 > promedio_facultad_2 && promedio_facultad_1 > promedio_facultad_3)
         {
             cout << " La facultad con el mejor promedio es : " << "Facultad de Ingenieria" << " con un promedio de: " << promedio_facultad_1 << endl;
@@ -89,9 +91,10 @@ void llamaCiclo()
         }
     } while (repetir);
 }
+// fin del while
 int busquedaAleatorios(int minimo, int maximo)
 {
-    return minimo + rand() / (RAND_MAX / (maximo - minimo + 1) + 1);
+    return minimo + rand() / (RAND_MAX / (maximo - minimo + 1) + 1); //formula de numeros aleatorios
 }
 
 void llenarMatriz(float matriz[NUMERO_ALUMNOS][NUMERO_NOTAS + 1])
@@ -154,7 +157,10 @@ float imprimirMatriz(float matriz[NUMERO_ALUMNOS][NUMERO_NOTAS + 1], char alumno
     {
         cout << setw(9) << " Parcial " << x+1;
     }
-    cout << setw(9) << " Actividad " <<setw(9)<<" Total"<<endl;
+    //dejo estas iteraciones fuera para poder modificar el encabezado de columna de tabla
+    cout << setw(9) << " Actividad" <<setw(9)<<"Total"<<endl;
+
+    //funcion que imprime el promedio
     imprimirMatrizLinea();
     for (y = 0; y < NUMERO_ALUMNOS; y++)
     {
