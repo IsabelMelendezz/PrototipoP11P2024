@@ -49,6 +49,8 @@ void llamaCiclo()
     float promedio_facultad_3;
     //declaracion de vector para llenar los nombres
     char alumnos[NUMERO_ALUMNOS][NOMBRES] = {"ANA","HECTOR","LUCIA ","PABLO","EMILIO"};
+
+    //comienzo del ciclo do while para controlar el flujo de repeticion
     do
     {
 
@@ -56,8 +58,8 @@ void llamaCiclo()
         promedio_facultad_1=0;
         promedio_facultad_2=0;
         promedio_facultad_3=0;
-        cout << "------------------------Bienvenido---------------" << endl;
-        cout<<"-------------------Comparacion de facultades-------"<<endl<<endl;
+        cout<<"------------------------Bienvenido---------------------" << endl;
+        cout<<"-----------------Comparacion de facultades-------------"<<endl<<endl;
         llenarMatriz(matriz_facultad_1);
         promedio_facultad_1 = imprimirMatriz(matriz_facultad_1, alumnos, "Facultad de Ingenieria");
         llenarMatriz(matriz_facultad_2);
@@ -66,15 +68,15 @@ void llamaCiclo()
         promedio_facultad_3 = imprimirMatriz(matriz_facultad_3, alumnos, "Facultad de Administracion");
         if (promedio_facultad_1 > promedio_facultad_2 && promedio_facultad_1 > promedio_facultad_3)
         {
-            cout << " La facultad con el mejor promedio es : " << "Facultad de Ingenieria" << " Promedio: " << promedio_facultad_1 << endl;
+            cout << " La facultad con el mejor promedio es : " << "Facultad de Ingenieria" << " con un promedio de: " << promedio_facultad_1 << endl;
         } else
         if (promedio_facultad_2 > promedio_facultad_1 && promedio_facultad_2 > promedio_facultad_3)
         {
-            cout << " La facultad con el mejor promedio es : " << "Facultad de Arquitectura" << " Promedio: " << promedio_facultad_2 << endl;
+            cout << " La facultad con el mejor promedio es : " << "Facultad de Arquitectura" << " con un promedio: " << promedio_facultad_2 << endl;
         } else
         if (promedio_facultad_3 > promedio_facultad_2 && promedio_facultad_3 > promedio_facultad_1)
         {
-            cout << " La facultad con el mejor promedio es : " << "Facultad de Administracion" << " Promedio: " << promedio_facultad_3 << endl;
+            cout << " La facultad con el mejor promedio es : " << "Facultad de Administracion" << " con un promedio: " << promedio_facultad_3 << endl;
         } else
         {
             cout << " Algunas facultades tienen el mismo promedio " << endl << endl;
@@ -179,8 +181,8 @@ float imprimirMatriz(float matriz[NUMERO_ALUMNOS][NUMERO_NOTAS + 1], char alumno
         imprimirMatrizLinea();
     }
     promedioGeneral = totalGeneral / NUMERO_ALUMNOS;
-    cout << "La Nota mayor la tiene: "<< alumnoPromedioMayor << "con: "<< promedioMayor<<"puntos" << endl;
-    cout << "Nota menor: " << setw(10) << alumnoPromedioMenor <<  setw(10) << promedioMenor << endl;
-    cout << "Nota prom : " << setw(10) <<  promedioGeneral << endl << endl;
+    cout << "La Nota mayor la tiene: "<< alumnoPromedioMayor << " con: "<< promedioMayor<<" puntos" << endl;
+    cout << "La Nota menor la tiene: " << alumnoPromedioMenor <<" con: " << promedioMenor <<" puntos"<< endl;
+    cout << "Nota promedio de la facultad : " << setw(10) <<  promedioGeneral << endl << endl;
     return promedioGeneral;
 }
