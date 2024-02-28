@@ -17,7 +17,7 @@ using namespace std;
 #define NUMERO_NOTAS 4
 #define MAX_CALIFICACION 100
 #define MIN_CALIFICACION 0
-#define MAXIMA_LONGITUD_CADENA 100
+#define NOMBRES 50
 
 //PROTOTIPOS DE FUNCIONES VOID NO DEVUELVE VALOR
 void llamaCiclo();
@@ -42,14 +42,16 @@ void llamaCiclo()
     float matriz_facultad_3[NUMERO_ALUMNOS][NUMERO_NOTAS + 1];
     char opcion;
     bool repetir = true;
+
     //declaracion de promedios
     float promedio_facultad_1;
     float promedio_facultad_2;
     float promedio_facultad_3;
-
-    char alumnos[NUMERO_ALUMNOS][MAXIMA_LONGITUD_CADENA] = {"Luis","Carlos","Maria","Pedro","Juan"};
+    //declaracion de vector para llenar los nombres
+    char alumnos[NUMERO_ALUMNOS][NOMBRES] = {"ANA","HECTOR","LUCIA ","PABLO","EMILIO"};
     do
     {
+
         system("cls");
         promedio_facultad_1=0;
         promedio_facultad_2=0;
@@ -129,7 +131,7 @@ void imprimirMatrizLinea()
     }
     cout << "+\n";
 }
-float imprimirMatriz(float matriz[NUMERO_ALUMNOS][NUMERO_NOTAS + 1], char alumnos[NUMERO_ALUMNOS][MAXIMA_LONGITUD_CADENA], string nombreFacultad)
+float imprimirMatriz(float matriz[NUMERO_ALUMNOS][NUMERO_NOTAS + 1], char alumnos[NUMERO_ALUMNOS][NOMBRES], string nombreFacultad)
 {
     //Funci�n que imprime la matriz en pantalla y realizando los calculos necesarios del promedio
     int y, x;
@@ -138,10 +140,10 @@ float imprimirMatriz(float matriz[NUMERO_ALUMNOS][NUMERO_NOTAS + 1], char alumno
     float promedioMenor = matriz[0][NUMERO_NOTAS];
     float totalGeneral = 0;
     float promedioGeneral = 0;
-    char alumnoPromedioMayor[MAXIMA_LONGITUD_CADENA];
-    char alumnoPromedioMenor[MAXIMA_LONGITUD_CADENA];
-    memcpy(alumnoPromedioMayor, alumnos[0], MAXIMA_LONGITUD_CADENA);
-    memcpy(alumnoPromedioMenor, alumnos[0], MAXIMA_LONGITUD_CADENA);
+    char alumnoPromedioMayor[NOMBRES];
+    char alumnoPromedioMenor[NOMBRES];
+    memcpy(alumnoPromedioMayor, alumnos[0], NOMBRES);
+    memcpy(alumnoPromedioMenor, alumnos[0], NOMBRES);
     cout << nombreFacultad << endl;
     cout << "(Nota1)=>Primer Parcial  (Nota2)=>Segundo Parcial (Nota3)=>Final (Nota4)=>Actividades" << endl;
     imprimirMatrizLinea();
@@ -166,12 +168,12 @@ float imprimirMatriz(float matriz[NUMERO_ALUMNOS][NUMERO_NOTAS + 1], char alumno
         if (promedio > promedioMayor)
         {
             promedioMayor = promedio;
-            memcpy(alumnoPromedioMayor, alumnos[y], MAXIMA_LONGITUD_CADENA);
+            memcpy(alumnoPromedioMayor, alumnos[y], NOMBRES);
         }
         if (promedio < promedioMenor)
         {
             promedioMenor = promedio;
-            memcpy(alumnoPromedioMenor, alumnos[y], MAXIMA_LONGITUD_CADENA);
+            memcpy(alumnoPromedioMenor, alumnos[y], NOMBRES);
         }
         cout << setw(9) << fixed << setprecision(2) << promedio << "!" << endl;
         imprimirMatrizLinea();
